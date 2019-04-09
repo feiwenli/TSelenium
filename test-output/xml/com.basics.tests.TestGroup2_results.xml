@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="case2"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.000">
+  <properties />
+  
+  
+            <testcase name="testG" time="0.000" classname="com.basics.tests.TestGroup2" />
+      
+</testsuite>

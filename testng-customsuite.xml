@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!--mvn clean test -DxmlFileName=testng-customsuite.xml-->
+<!--@BeforeSuite-->
+<suite name="TestAll" parallel="tests" thread-count="4">
+
+
+
+
+    <test name="case2">
+        <groups>
+            <run>
+                <include name="selenium-test"></include>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="com.basics.tests.TestGroup"></class>
+            <class name="com.basics.tests.TestGroup2"></class>
+        </classes>
+    </test>
+
+    <test name="case3">
+        <classes>
+            <class name="com.basics.tests.TestParameter"></class>
+            <parameter name="browser" value="chrome"></parameter>
+            <parameter name="url" value="https://www.baidu.com/"></parameter>
+        </classes>
+    </test>
+   <!-- -->
+    <!--
+    <test name="case4">
+        <classes>
+            <class name="com.basics.tests.TestParameter"></class>
+            <parameter name="browser" value="firefox"></parameter>
+            <parameter name="url" value="https://www.baidu.com/"></parameter>
+        </classes>
+    </test>
+        -->
+
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+</suite>
+<!--AfterSuite-->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="case2"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.006">
+  <properties />
+  
+  
+            <testcase name="groupA002" time="0.001" classname="com.basics.tests.TestGroup" />
+                <testcase name="groupA001" time="0.005" classname="com.basics.tests.TestGroup" />
+      
+</testsuite>
