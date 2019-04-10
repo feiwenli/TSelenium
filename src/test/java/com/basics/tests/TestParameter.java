@@ -6,12 +6,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class TestParameter {
 
@@ -30,8 +32,10 @@ public class TestParameter {
     @BeforeTest
     public void before(String browser, String url){
         if(browser.equals("chrome")){
-            System.setProperty("webdriver.chrome.driver", "test-classes/driver/chromedriver");
-            driver = new ChromeDriver();
+            System.setProperty("webdriver.chrome.driver", "test-classes/driver/chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-gpu");
+            driver = new ChromeDriver(options);
         }else if(browser.equals("firefox")){
             System.setProperty("webdriver.gecko.driver", "test-classes/driver/geckodriver-win64.exe");
             driver = new FirefoxDriver();
@@ -39,6 +43,7 @@ public class TestParameter {
             System.out.println("your broeser not supported");
         }
         driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.get(url);
 
     }
