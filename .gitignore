@@ -2,3 +2,4 @@
 *.jar
 /.idea/
 *.iml
+/test-output/

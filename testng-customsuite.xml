@@ -20,7 +20,7 @@
             <class name="com.basics.tests.TestGroup2"></class>
         </classes>
     </test>
-    <!--
+
         <test name="case3">
             <classes>
                 <class name="com.basics.tests.TestParameter"></class>
@@ -28,7 +28,7 @@
                 <parameter name="url" value="https://www.baidu.com/"></parameter>
             </classes>
         </test>
-       -->
+      <!--  -->
     <!--
     <test name="case4">
         <classes>
