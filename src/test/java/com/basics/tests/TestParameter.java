@@ -32,8 +32,8 @@ public class TestParameter {
     @BeforeTest
     public void before(String browser, String url){
         if(browser.equals("chrome")){
-            System.out.println("driverpath:"+System.getProperty("user.dir")+"test-classes/driver/chromedriver.exe");
-            System.setProperty("webdriver.chrome.driver", "test-classes/driver/chromedriver.exe");
+            System.out.println("driverpath:"+System.getProperty("user.dir")+"\\test-classes\\driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\test-classes\\driver\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
             // 解决问题：Timed out receiving message from renderer
             options.addArguments("--disable-gpu");
