@@ -51,4 +51,5 @@ public class AutoMail {
 
         return mailto;
     }
+
 }

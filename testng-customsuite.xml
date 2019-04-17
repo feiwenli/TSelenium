@@ -3,10 +3,8 @@
 
 <!--mvn clean test -DxmlFileName=testng-customsuite.xml-->
 <!--@BeforeSuite-->
-<suite name="TestAll" parallel="tests" thread-count="4">
-
-
-
+<!--<suite name="TestAll" parallel="tests" thread-count="4">-->
+<suite name="TestAll">
 
     <test name="case2">
         <groups>
@@ -21,13 +19,13 @@
         </classes>
     </test>
 
-        <test name="case3">
-            <classes>
-                <class name="com.basics.tests.TestParameter"></class>
-                <parameter name="browser" value="chrome"></parameter>
-                <parameter name="url" value="https://www.baidu.com/"></parameter>
-            </classes>
-        </test>
+    <test name="case3">
+        <classes>
+            <class name="com.basics.tests.TestParameter"></class>
+            <parameter name="browser" value="chrome"></parameter>
+            <parameter name="url" value="https://www.baidu.com/"></parameter>
+        </classes>
+    </test>
       <!--  -->
     <!--
     <test name="case4">

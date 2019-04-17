@@ -31,4 +31,6 @@ public class TestCheckedException {
     public void throwIfOrderIsNotExists() throws OrderUpdateExceprion, OrderNotFoundException, OrderUpdateExceprion {
         orderBo.update(data);
     }
+
+
 }

@@ -67,6 +67,10 @@ public class TestParameter {
 
     }
 
+    @Test
+    public void test02(){}
+
+
     @AfterTest
     public void after(){
         driver.quit();
