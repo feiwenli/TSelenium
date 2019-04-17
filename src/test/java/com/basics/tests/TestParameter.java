@@ -37,6 +37,8 @@ public class TestParameter {
             ChromeOptions options = new ChromeOptions();
             // 解决问题：Timed out receiving message from renderer
             options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
             driver = new ChromeDriver(options);
         }else if(browser.equals("firefox")){
             System.setProperty("webdriver.gecko.driver", "test-classes/driver/geckodriver-win64.exe");
