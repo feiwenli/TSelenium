@@ -35,9 +35,8 @@ public class TestParameter {
             System.out.println("driverpath:"+System.getProperty("user.dir")+"\\test-classes\\driver\\chromedriver.exe");
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\test-classes\\driver\\chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
-            // 解决问题：Timed out receiving message from renderer
-            options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-gpu");  //谷歌文档提到需要加上这个属性来规避bug
+//            options.addArguments("--no-sandbox");   //取消沙盒模式
             options.addArguments("--disable-dev-shm-usage");
             driver = new ChromeDriver(options);
         }else if(browser.equals("firefox")){
