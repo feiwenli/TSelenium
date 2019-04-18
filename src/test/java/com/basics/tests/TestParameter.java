@@ -32,8 +32,8 @@ public class TestParameter {
     @BeforeTest
     public void before(String browser, String url){
         if(browser.equals("chrome")){
-            System.out.println("driverpath:"+System.getProperty("user.dir")+"\\test-classes\\driver\\chromedriver.exe");
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\test-classes\\driver\\chromedriver.exe");
+//            System.out.println("driverpath:"+System.getProperty("user.dir")+"\\test-classes\\driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "test-classes/driver/chromedriver.exe");
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--disable-gpu");  //谷歌文档提到需要加上这个属性来规避bug
             options.addArguments("--no-sandbox");   //取消沙盒模式，对应报错：Timed out receiving message from renderer: 600.000
